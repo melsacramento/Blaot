@@ -7,9 +7,9 @@ services:
 
   gr-file:
     image: busybox
-    entrypoint: watch cat /file
+    entrypoint: watch cat /file/file.txt
     volumes:
-      - ./configs/${PORTAINER_EDGE_GROUP}:file.txt
+      - ./configs/${PORTAINER_EDGE_GROUP}:/file/file.txt
 
   # id-dir:
   #   image: busybox
@@ -19,6 +19,6 @@ services:
 
   id-file:
     image: busybox
-    entrypoint: watch cat /file
+    entrypoint: watch cat /file/file.txt
     volumes:
-      - ./configs/${PORTAINER_EDGE_ID}:file.txt
+      - ./configs/${PORTAINER_EDGE_ID}:/file/file.txt
